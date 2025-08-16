@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, Share } from "lucide-react";
+import { Copy, Share, ArrowRight, Instagram } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface StepCardProps {
@@ -29,22 +29,29 @@ export function StepCard({ step, onShareClick }: StepCardProps) {
 
   if (step === 1) {
     return (
-      <Card variant="surface" className="shadow-soft border border-border mb-4">
-        <div className="p-6 space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-400 to-blue-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xs">1</span>
+      <Card className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600 border-0 shadow-xl mb-4">
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="relative p-6 space-y-4 text-white">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/30">
+                <span className="text-white font-bold text-sm">1</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Copy your link</h3>
+                <p className="text-white/80 text-sm">Share it anywhere you want</p>
+              </div>
             </div>
-            <h3 className="font-bold text-text">Copy your link</h3>
+            <ArrowRight className="w-5 h-5 text-white/60" />
           </div>
           
           <Button 
-            variant="glass" 
+            variant="ghost" 
             onClick={handleCopyLink}
-            className="w-full shadow-soft"
+            className="w-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-2 border-white/30 rounded-xl h-12"
           >
             <Copy className="w-4 h-4 mr-2" />
-            copy link
+            Copy Link
           </Button>
         </div>
       </Card>
@@ -52,22 +59,29 @@ export function StepCard({ step, onShareClick }: StepCardProps) {
   }
 
   return (
-    <Card variant="surface" className="shadow-soft border border-border">
-      <div className="p-6 space-y-4">
-        <div className="flex items-center gap-3">
-          <div className="w-6 h-6 rounded-full gradient-ig flex items-center justify-center">
-            <span className="text-white font-bold text-xs">2</span>
+    <Card className="relative overflow-hidden gradient-ig border-0 shadow-xl">
+      <div className="absolute inset-0 bg-black/10" />
+      <div className="relative p-6 space-y-4 text-white">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/30">
+              <span className="text-white font-bold text-sm">2</span>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">Share on Story</h3>
+              <p className="text-white/80 text-sm">Let everyone send you messages</p>
+            </div>
           </div>
-          <h3 className="font-bold text-text">Share!</h3>
+          <Instagram className="w-6 h-6 text-white/80" />
         </div>
         
         <Button 
-          variant="primary-ig" 
+          variant="ghost" 
           onClick={onShareClick}
-          className="w-full shadow-ig"
+          className="w-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-2 border-white/30 rounded-xl h-12"
         >
           <Share className="w-4 h-4 mr-2" />
-          Share on Stories! ✨
+          Share on Instagram Story ✨
         </Button>
       </div>
     </Card>

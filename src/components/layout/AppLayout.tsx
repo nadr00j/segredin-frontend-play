@@ -14,12 +14,12 @@ export function AppLayout({ children }: AppLayoutProps) {
   const currentTab = isPlayPage ? "play" : isInboxPage ? "inbox" : "play";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-border">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100 shadow-sm">
         <div className="max-w-md mx-auto px-6">
           <div className="flex items-center justify-between h-14">
-            <Link to="/app/play" className="text-lg font-bold text-brand tracking-tight">
+            <Link to="/app/play" className="text-xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent tracking-tight">
               Segredin
             </Link>
             
@@ -43,7 +43,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       {/* Navigation Tabs */}
       <div className="max-w-md mx-auto px-6 pt-3">
         <Tabs value={currentTab} className="w-full">
-          <TabsList className="w-full bg-surface border border-border shadow-soft">
+          <TabsList className="w-full bg-white/60 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl">
             <TabsTrigger value="play" asChild className="flex-1 data-[state=active]:bg-surface data-[state=active]:shadow-soft">
               <Link to="/app/play">PLAY</Link>
             </TabsTrigger>
@@ -55,7 +55,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-md mx-auto px-6 py-4">
+      <main className="max-w-md mx-auto px-6 py-6">
         {children}
       </main>
     </div>
