@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "New Message",
+    "preview": "Hey! What's your biggest secret?",
+    "body": "Hey! What's your biggest secret? I'm curious about what you've never told anyone...",
+    "createdAt": "2024-01-16T15:30:00Z",
+    "read": false,
+    "hint": "This person seems curious about personal secrets"
+  },
+  {
+    "id": "2", 
+    "title": "New Message",
+    "preview": "Do you like someone?",
+    "body": "Do you like someone? If yes, who is it? 👀",
+    "createdAt": "2024-01-16T15:27:00Z",
+    "read": true,
+    "hint": "Someone wants to know about your crush"
+  },
+  {
+    "id": "3",
+    "title": "New Message", 
+    "preview": "What do you think about me?",
+    "body": "What do you think about me? Be honest please 😅",
+    "createdAt": "2024-01-16T15:25:00Z",
+    "read": false,
+    "hint": "This person wants your honest opinion about them"
+  },
+  {
+    "id": "4",
+    "title": "New Message",
+    "preview": "Your most embarrassing moment?",
+    "body": "What was your most embarrassing moment ever? I need a good laugh 😂",
+    "createdAt": "2024-01-16T15:20:00Z", 
+    "read": true,
+    "hint": "Someone wants to hear about your embarrassing stories"
+  },
+  {
+    "id": "5",
+    "title": "New Message",
+    "preview": "Dream vacation destination?",
+    "body": "If money wasn't an issue, where would you go for your dream vacation?",
+    "createdAt": "2024-01-16T15:15:00Z",
+    "read": false,
+    "hint": "This person is curious about your travel dreams"
+  },
+  {
+    "id": "6",
+    "title": "New Message",
+    "preview": "Favorite memory?", 
+    "body": "What's your favorite memory from this year?",
+    "createdAt": "2024-01-16T15:10:00Z",
+    "read": true,
+    "hint": "Someone wants to know about your best moments"
+  },
+  {
+    "id": "7",
+    "title": "New Message",
+    "preview": "If you could have dinner...",
+    "body": "If you could have dinner with anyone, dead or alive, who would it be and why?",
+    "createdAt": "2024-01-16T15:05:00Z",
+    "read": false,
+    "hint": "This person is interested in your role models"
+  },
+  {
+    "id": "8",
+    "title": "New Message",
+    "preview": "Hidden talent?",
+    "body": "Do you have any hidden talents that people don't know about?",
+    "createdAt": "2024-01-16T15:00:00Z",
+    "read": true,
+    "hint": "Someone wants to discover your special skills"
+  },
+  {
+    "id": "9",
+    "title": "New Message", 
+    "preview": "Biggest fear?",
+    "body": "What's your biggest fear? Don't worry, it's anonymous 🤫",
+    "createdAt": "2024-01-16T14:55:00Z",
+    "read": false,
+    "hint": "This person wants to know what scares you most"
+  },
+  {
+    "id": "10",
+    "title": "New Message",
+    "preview": "Song stuck in your head?",
+    "body": "What song is stuck in your head right now? Share the vibe! 🎵",
+    "createdAt": "2024-01-16T14:50:00Z",
+    "read": true,
+    "hint": "Someone is curious about your current music taste"
+  },
+  {
+    "id": "11",
+    "title": "New Message",
+    "preview": "Superpower of choice?",
+    "body": "If you could have any superpower, what would it be and how would you use it?",
+    "createdAt": "2024-01-16T14:45:00Z",
+    "read": false,
+    "hint": "This person wants to know your superhero fantasies"
+  },
+  {
+    "id": "12",
+    "title": "New Message",
+    "preview": "Late night thoughts?",
+    "body": "What keeps you awake at night? Share your 3am thoughts 🌙",
+    "createdAt": "2024-01-16T14:40:00Z",
+    "read": true,
+    "hint": "Someone is interested in your deep thoughts"
+  }
+]

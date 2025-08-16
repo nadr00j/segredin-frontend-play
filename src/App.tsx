@@ -2,8 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Play from "./pages/Play";
+import Inbox from "./pages/Inbox";
+import MessageDetail from "./pages/MessageDetail";
+import WebForm from "./pages/WebForm";
+import Paywall from "./pages/Paywall";
+import LinkSettings from "./pages/LinkSettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,7 +20,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Navigate to="/app/play" replace />} />
+          <Route path="/app/play" element={<Play />} />
+          <Route path="/app/inbox" element={<Inbox />} />
+          <Route path="/app/message/:id" element={<MessageDetail />} />
+          <Route path="/app/link" element={<LinkSettings />} />
+          <Route path="/s/:slug" element={<WebForm />} />
+          <Route path="/pro/upgrade" element={<Paywall />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
