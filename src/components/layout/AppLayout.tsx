@@ -16,10 +16,10 @@ export function AppLayout({ children }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-md mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/app/play" className="text-xl font-bold text-brand">
+      <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-border">
+        <div className="max-w-md mx-auto px-6">
+          <div className="flex items-center justify-between h-14">
+            <Link to="/app/play" className="text-lg font-bold text-brand tracking-tight">
               Segredin
             </Link>
             
@@ -41,13 +41,13 @@ export function AppLayout({ children }: AppLayoutProps) {
       </header>
 
       {/* Navigation Tabs */}
-      <div className="max-w-md mx-auto px-4 pt-4">
+      <div className="max-w-md mx-auto px-6 pt-3">
         <Tabs value={currentTab} className="w-full">
-          <TabsList className="w-full">
-            <TabsTrigger value="play" asChild className="flex-1">
+          <TabsList className="w-full bg-surface border border-border shadow-soft">
+            <TabsTrigger value="play" asChild className="flex-1 data-[state=active]:bg-surface data-[state=active]:shadow-soft">
               <Link to="/app/play">PLAY</Link>
             </TabsTrigger>
-            <TabsTrigger value="inbox" asChild className="flex-1">
+            <TabsTrigger value="inbox" asChild className="flex-1 data-[state=active]:bg-surface data-[state=active]:shadow-soft">
               <Link to="/app/inbox">INBOX</Link>
             </TabsTrigger>
           </TabsList>
@@ -55,7 +55,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-md mx-auto px-4 py-6">
+      <main className="max-w-md mx-auto px-6 py-4">
         {children}
       </main>
     </div>

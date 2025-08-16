@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Segredin Design System - All colors MUST be HSL */
+/* Segredin Design System - Instagram-inspired - All colors MUST be HSL */
 
 @layer base {
   :root {
@@ -11,13 +11,18 @@
     --brand-glow: 275 95% 68%;
     --brand-dark: 272 83% 45%;
     
-    /* Base Colors */
-    --bg: 0 0% 100%;
-    --surface: 0 0% 98%;
-    --text: 240 10% 3%;
-    --text-muted: 240 5% 45%;
-    --border: 240 6% 90%;
-    --input: 240 6% 95%;
+    /* Instagram-inspired Colors */
+    --bg: 0 0% 98%;
+    --surface: 0 0% 100%;
+    --text: 0 0% 5%;
+    --text-muted: 0 0% 55%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    
+    /* Envelope Colors */
+    --envelope-cream: 45 29% 97%;
+    --envelope-gold: 45 100% 85%;
+    --envelope-shadow: 45 20% 88%;
     
     /* State Colors */
     --success: 158 64% 40%;
@@ -40,11 +45,14 @@
     --gradient-brand: linear-gradient(135deg, hsl(var(--brand)), hsl(var(--brand-glow)));
     --gradient-alt-1: linear-gradient(135deg, hsl(var(--alt-1-start)), hsl(var(--alt-1-end)));
     --gradient-alt-2: linear-gradient(135deg, hsl(var(--alt-2-start)), hsl(var(--alt-2-end)));
+    --gradient-envelope: linear-gradient(145deg, hsl(var(--envelope-cream)), hsl(var(--envelope-gold)));
     
-    /* Shadows */
-    --shadow-soft: 0 10px 30px -12px hsl(0 0% 0% / 0.15);
+    /* Instagram-style Shadows */
+    --shadow-soft: 0 2px 12px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 8px 30px hsl(0 0% 0% / 0.12);
     --shadow-brand: 0 10px 30px -10px hsl(var(--brand) / 0.3);
     --shadow-ig: 0 10px 30px -10px hsl(var(--ig-start) / 0.3);
+    --shadow-envelope: 0 4px 20px hsl(0 0% 0% / 0.15);
     
     /* Radii */
     --radius-card: 24px;
@@ -127,7 +135,7 @@
 @layer components {
   /* Glass effect utilities */
   .glass {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+    @apply bg-white/90 backdrop-blur-sm border border-white/30;
   }
   
   /* Gradient backgrounds */
@@ -147,9 +155,17 @@
     background: var(--gradient-alt-2);
   }
   
-  /* Custom shadows */
+  .gradient-envelope {
+    background: var(--gradient-envelope);
+  }
+  
+  /* Instagram-style shadows */
   .shadow-soft {
     box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
   }
   
   .shadow-brand {
@@ -158,6 +174,23 @@
   
   .shadow-ig {
     box-shadow: var(--shadow-ig);
+  }
+  
+  .shadow-envelope {
+    box-shadow: var(--shadow-envelope);
+  }
+  
+  /* Envelope animations */
+  .envelope-closed {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .envelope-opening {
+    @apply animate-pulse;
+  }
+  
+  .envelope-open {
+    @apply scale-105 transition-all duration-300 ease-out;
   }
   
   /* Typography scale */
